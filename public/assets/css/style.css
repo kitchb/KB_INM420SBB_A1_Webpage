@@ -165,6 +165,50 @@ body {
   display: none;
 }
 
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#fcontent,
+#fsocials {
+  margin-bottom: 40px;
+}
+
+#fcontent p {
+  padding: 5px 0;
+}
+#fcontent #p3,
+#fcontent #p4 {
+  color: #00B894;
+  font-size: 13px;
+  padding: 5px 0;
+}
+#fcontent #email {
+  color: #6C5CE7;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+#fsocials {
+  z-index: 1;
+}
+#fsocials .ficons {
+  padding: 0 4px;
+}
+
+#fsocials img {
+  margin: 0 5px;
+}
+
+.footerdesk {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .main_header {
     justify-content: space-between;
@@ -240,6 +284,89 @@ body {
   .content1 #deskboximage {
     display: block;
     margin: 15px auto;
+  }
+  .footermobile {
+    display: none;
+  }
+  .footerdesk {
+    display: flex;
+    padding: 0 40px;
+  }
+  .footerdesk .leftcolumn,
+  .footerdesk .rightcolumn {
+    flex: 1;
+  }
+  .footerdesk #leftcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .footerdesk #fleft1, .footerdesk #fleft2 {
+    margin-bottom: 10px;
+  }
+  .footerdesk .column {
+    margin-bottom: 10px;
+    padding: 20px 0;
+  }
+  .footerdesk .column li {
+    padding: 10px 10px;
+    font-size: 12px;
+  }
+  .footerdesk #active {
+    text-decoration: underline;
+  }
+  .footerdesk #flcolumns {
+    display: flex;
+    flex-direction: row;
+  }
+  .footerdesk #deskiconsimg {
+    width: 30%;
+    height: auto;
+  }
+  .footerdesk .fhead {
+    font-size: 12px;
+    color: #5C5C5C;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+  }
+  .footerdesk #rightcolumn {
+    text-align: left;
+    justify-content: flex-start;
+    padding: 10px;
+    margin-right: 20%;
+    border: none;
+  }
+  .footerdesk #email2 {
+    color: #6C5CE7;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 20px;
+  }
+  .footerdesk .form-control {
+    padding: 20px 0;
+    border: none;
+  }
+  .footerdesk .form-control input {
+    padding: 8px;
+    border-radius: 15px;
+    background-color: rgb(223, 223, 223);
+    border: none;
+    margin: 8px 0;
+  }
+  .footerdesk #fname, .footerdesk #femail {
+    padding: 130px;
+  }
+  .footerdesk #fmsg {
+    padding: 250px;
+  }
+  .footerdesk .form-control button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #6C5CE7;
+    color: white;
+    border: none;
+    cursor: pointer;
   }
 }
 
