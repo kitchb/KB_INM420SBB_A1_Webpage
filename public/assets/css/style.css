@@ -228,32 +228,24 @@ body {
   padding: 1em;
 }
 .content3 #price {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 32px;
-  text-align: center;
+  text-align: left;
   padding: 4px 0;
   font-weight: bold;
   white-space: nowrap;
 }
-.content3 #bill, .content3 #monthly {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.content3 #bill,
+.content3 #monthly {
   font-size: 20px;
-  text-align: center;
-  padding: 4px 0;
+  text-align: left;
+  padding: 14px 0;
   color: gray;
   white-space: nowrap;
   letter-spacing: 2px;
 }
 .content3 #yearly {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 20px;
-  text-align: center;
+  text-align: left;
   padding: 4px 0;
   font-weight: bold;
   color: #3d3d3d;
@@ -265,11 +257,23 @@ body {
   gap: 20px;
   justify-items: center;
 }
-.cards3 #card31, .cards3 #card32, .cards3 #card33 {
+.cards3 #card31,
+.cards3 #card32,
+.cards3 #card33 {
   border: 2px solid #ffffff;
   padding: 20px;
   border-radius: 10px;
   background-color: #f9f9f9;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  width: 90%;
+  line-height: 90%;
+}
+.cards3 #card33 {
+  border: 2px solid #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #6C5CE7;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
   text-align: left;
   width: 90%;
@@ -290,11 +294,17 @@ body {
   padding: 5px;
   font-size: 13px;
 }
+.title-container #enterprise {
+  color: #55EFC4;
+}
 
 .contents3 .amt {
   color: #6C5CE7;
   font-size: 17px;
   font-weight: bold;
+}
+.contents3 #enteramt {
+  color: white;
 }
 .contents3 p {
   padding: 9px 0;
@@ -313,6 +323,11 @@ body {
   border-radius: 15px;
   padding: 10px;
   color: white;
+}
+
+#starttoday {
+  background-color: white;
+  color: #6C5CE7;
 }
 
 #footer {
@@ -416,7 +431,7 @@ body {
   .SignInBtn {
     position: relative;
     top: 0;
-    right: 0;
+    right: 100;
     margin-left: auto;
   }
   #li2,
@@ -440,7 +455,7 @@ body {
   }
   .footerdesk {
     display: flex;
-    padding: 0 3em;
+    padding: 0 10em;
   }
   .footerdesk .leftcolumn,
   .footerdesk .rightcolumn {
@@ -514,24 +529,39 @@ body {
     cursor: pointer;
   }
   .content2 {
-    padding: 3em;
+    padding: 6em;
   }
   .content2 img {
     width: 15%;
+  }
+  .content2 .par23 {
+    padding: 10px;
+    line-height: 30px;
   }
   .twocards > div {
     width: 25%;
   }
   .content3 {
-    padding: 3em;
+    padding: 6em;
   }
-  .content3 #bill, .content3 #yearly {
+  .content3 #price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    text-align: left;
+    padding: 4px 0;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .content3 #bill,
+  .content3 #yearly {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 20px;
     text-align: center;
-    padding: 4px 0;
+    padding: 14px 0;
     font-weight: bold;
     color: gray;
     white-space: nowrap;
@@ -553,6 +583,22 @@ body {
     gap: 20px;
     justify-items: center;
     align-items: center;
+  }
+  .cards3 #card33 {
+    border: 2px solid #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: 90%;
+    line-height: 90%;
+  }
+  .cards3 #card33 #enterprise {
+    color: black;
+  }
+  .cards3 #card33 #enteramt {
+    color: #6C5CE7;
   }
   .contents3 img {
     width: 8.5%;
