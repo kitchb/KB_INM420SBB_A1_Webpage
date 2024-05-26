@@ -225,6 +225,164 @@ body {
     // }
 }
 
+// SECTION 2
+.content2 {
+    padding: 1em;
+
+    .par21 {
+        @include setFlex(flex-start);
+        font-size: 20px;
+        text-align: center;
+        padding: 6px 0;
+        font-weight: bold;
+    }
+
+    #par22 {
+        @include setFlex(flex-start);
+        font-size: 18px;
+        padding: 4px 0;
+        font-weight: bold;
+        color: $purple-clr;
+        padding: 2px;
+    }
+
+    #par23 {
+        @include setFlex(flex-start);
+        font-size: 10px;
+        padding: 29px 0;
+        line-height: 300px;
+    }
+
+    #par24 {
+        @include setFlex(flex-start);
+        font-size: 14px;
+        padding: 9px 0;
+        line-height: 190%;
+    }
+
+    img {
+        width: 25%;
+    }
+
+    .cardBtn2{
+        color: $purple-clr;
+        border-radius: 20px;
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+.twocards{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.twocards>div {
+    width: 50%;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+// Section 3
+    .block3{
+        // padding: 20px;
+    }
+    .content3{
+        padding: 1em;
+
+        #price{
+            @include setFlex(center);
+            font-size: 32px;
+            text-align: center;
+            padding: 4px 0;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        #bill, #monthly{
+            @include setFlex(center);
+            font-size: 20px;
+            text-align: center;
+            padding: 4px 0;
+            color: gray;
+            white-space: nowrap;
+            letter-spacing: 2px;
+        }
+
+        #yearly{
+            @include setFlex(center);
+            font-size: 20px;
+            text-align: center;
+            padding: 4px 0;
+            font-weight: bold;
+            color: $darkgray-clr
+        }
+    }
+
+    .cards3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-items: center;
+    
+      #card31, #card32, #card33 {
+        border: 2px solid #ffffff; 
+        padding: 20px; 
+        border-radius: 10px; 
+        background-color: #f9f9f9; 
+        box-shadow: $shadow;
+        text-align: left; 
+        width: 90%;
+        line-height: 90%;
+      }
+    }
+
+    .title-container {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+
+      .title{
+        font-weight: bold;
+        font-size: 13px;
+      }
+
+      .cardBtn3{
+        border-radius: 20px;
+        padding: 5px;
+        font-size: 13px;
+      }
+    }
+
+    .contents3{
+        .amt{
+            color: $purple-clr;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        p{
+            padding: 9px 0;
+            font-size: 12px;
+
+        }
+
+        img{
+            width: 7%;
+            max-width: 100%;
+        }
+    }
+
+    .cardBtn3A{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $purple-clr;
+        border-radius: 15px;
+        padding: 10px;
+        color: white;
+    }
+   
 // FOOTER
 #footer {
     display: flex;
@@ -273,7 +431,7 @@ body {
 
 .footerdesk {
     display: none;
-}   
+}
 
 @media (min-width: 768px) {
 
@@ -375,14 +533,14 @@ body {
     }
 
     // Footer
-    .footermobile{
+    .footermobile {
         display: none;
     }
 
     .footerdesk {
         display: flex;
-        padding: 0 40px;
-        
+        padding: 0 3em;
+
         .leftcolumn,
         .rightcolumn {
             flex: 1;
@@ -395,50 +553,51 @@ body {
             text-align: left;
         }
 
-        #fleft1, #fleft2 {
+        #fleft1,
+        #fleft2 {
             margin-bottom: 10px;
         }
-          
+
         .column {
             margin-bottom: 10px;
             padding: 20px 0;
 
-            li{
+            li {
                 padding: 10px 10px;
                 font-size: 12px;
             }
         }
 
-        #active{
+        #active {
             text-decoration: underline;
         }
 
-        #flcolumns{
+        #flcolumns {
             display: flex;
             flex-direction: row;
         }
 
-        #deskiconsimg{
+        #deskiconsimg {
             width: 30%;
             height: auto;
         }
 
-        .fhead{
+        .fhead {
             font-size: 12px;
             color: $gray-clr;
             text-transform: uppercase;
             letter-spacing: 2.5px;
         }
 
-        #rightcolumn{
+        #rightcolumn {
             text-align: left;
             justify-content: flex-start;
             padding: 10px;
             margin-right: 20%;
-            border:none
+            border: none
         }
 
-        #email2{
+        #email2 {
             color: $purple-clr;
             font-weight: bold;
             font-size: 30px;
@@ -452,27 +611,71 @@ body {
 
         .form-control input {
             padding: 8px;
-            border-radius: 15px; 
+            border-radius: 15px;
             background-color: rgb(223, 223, 223);
             border: none;
             margin: 8px 0;
         }
-        #fname, #femail{
-            padding: 130px;
-        }
-
-        #fmsg{
-            padding: 250px;
-        }
 
         .form-control button {
-        padding: 10px 20px;
-        border-radius: 5px;
-        background-color:$purple-clr;
-        color: white; 
-        border: none;
-        cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: $purple-clr;
+            color: white;
+            border: none;
+            cursor: pointer;
         }
     }
 
+    // Section 2
+    .content2{
+        padding: 3em;
+
+        img{
+            width:15%;
+        }
+    }
+
+    .twocards>div {
+        width: 25%;
+    }
+
+    // Section 3
+    .content3{
+        padding: 3em;
+
+        #bill, #yearly{
+            @include setFlex(center);
+            font-size: 20px;
+            text-align: center;
+            padding: 4px 0;
+            font-weight: bold;
+            color: gray;
+            white-space: nowrap;
+            letter-spacing: 2px;
+        }
+
+        #monthly{
+            @include setFlex(center);
+            font-size: 20px;
+            text-align: center;
+            padding: 4px 0;
+            font-weight: bold;
+            color: $purple-clr
+        }
+    }
+        .cards3{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            justify-items: center; 
+            align-items: center;
+        }
+
+        .contents3{
+        img{
+            width: 8.5%;
+            max-width: 20%;
+        }
+    }
 }
