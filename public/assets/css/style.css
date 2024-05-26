@@ -604,6 +604,10 @@ body {
     width: 8.5%;
     max-width: 20%;
   }
+  .contents3 #starttoday {
+    background-color: #6C5CE7;
+    color: white;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
