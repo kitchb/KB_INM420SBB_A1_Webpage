@@ -1,1 +1,230 @@
+*{ 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+// variables
+$shadow: 0px 2px 15px rgba(0,0,0,.2);
+$darkgray-clr: #3d3d3d;
+$gray-clr: #5C5C5C;
+$purple-clr: #6C5CE7;
+
+// mixins
+@mixin setFlex($x) {
+    display: flex;
+    align-items: center;
+    justify-content: $x;
+}
+
+@mixin dimension($w,$h){
+    width: $w;
+    height: $h;
+}
+
+.setPadding{
+    padding: 1em;
+}
+
+// CSS
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Inter", sans-serif;;
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+}
+
+// HEADER CSS
+.main_header {
+    @include setFlex(space-between);
+    box-shadow: $shadow;
+    padding: 2.5em 10px;
+    position: relative;
+}
+
+// Burger Menu
+.burger{
+    position: absolute;
+    top: 3vh;
+    left: 5vw;
+
+    div{
+        @include dimension(24px,2.5px);
+        background-color: $gray-clr;
+        margin: 4.5px;
+    }
+
+    &.active .l1{
+        transform: rotate(-45deg) translate(-4px,5px);
+    }
+    &.active .l2{
+        opacity: 0;
+    }
+    &.active .l3{
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
+}
+
+.icon{
+    display: none;
+}
+// "Grid"
+#navbrand{
+    position: absolute;
+    top: 3vh;
+    left: 18vw;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0.50px;
+    color: $gray-clr;
+}
+
+// NavMenu
+.nav {
+    position: absolute;
+    top: 9.5vh;
+    padding: 50px 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    width: auto;
+    
+    // //initial state (hidden)
+    opacity: 0;
+
+    // nav menu toggle active class
+    &.active{
+        right: 0;
+        opacity: 1;
+    }
+
+    ul{
+        @include setFlex(space-around);
+        flex-direction: column;
+        height: 100%;
+
+        li{
+            list-style: none;
+            margin: 15px 8em ;
+            @include dimension(100%,100%);
+
+            // //Initial values (hidden)
+            // opacity: 0;
+            // transform: translateX(80px);
+
+            a{
+                color: $gray-clr;
+                text-decoration: none;
+                @include setFlex(center);
+                @include dimension(100%,100%);
+                font-size: 1.5em;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.SignInBtn {
+    position: absolute;
+    top: 2.4vh;
+    right: 6vw;
+    background-color: $darkgray-clr; 
+    color: white;
+    border-radius: 10px; 
+    padding: 10px 30px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+
+
+
+@media (min-width: 768px){
+    // Header
+    .main_header{
+        justify-content: space-between;
+        padding: 1em 10px;
+    }
+
+    // "Grid"
+    #navbrand{
+        position: relative;
+        top: 0;
+        left: 13vh;
+        font-size: 42px;
+        color: black;
+    }
+
+
+    .icon{
+        display: block;
+        position: relative;
+        left: 12vh;
+    }
+
+    .burger{
+        display: none;
+    }
+
+    /* Nav */
+    .nav {
+        position:relative;
+        opacity: 1;
+        top: 45%;
+        left: 10%;
+        padding: 0 0px;
+        background-color: transparent;
+        backdrop-filter: none;
+        width: auto;
+        margin: 0 auto;
+        
+        ul {
+            flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            margin: 0 auto;
+            // width: auto;
+
+            .yellow-dot {
+                color: rgb(231, 142, 33);
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+
+            li {
+                opacity: 1;
+                transform: translateX(0px);
+                margin: 0 15px;
+                white-space: nowrap;
+
+                a {
+                    font-size: 1em;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .SignInBtn {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-left: auto;
+    }
+
+    #li2, #li3, #li4{
+        color: $purple-clr;
+        font-weight: 200;
+      
+    }
+}
