@@ -291,7 +291,7 @@ body {
 }
 .title-container .cardBtn3 {
   border-radius: 20px;
-  padding: 5px;
+  padding: 5px 15px;
   font-size: 13px;
 }
 .title-container #enterprise {
@@ -321,7 +321,7 @@ body {
   align-items: center;
   background-color: #6C5CE7;
   border-radius: 15px;
-  padding: 10px;
+  padding: 10px 35px;
   color: white;
 }
 
